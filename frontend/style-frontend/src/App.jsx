@@ -16,7 +16,7 @@ function App() {
       setDresses(data);
     } catch (err) {
       console.error("Error fetching dresses:", err);
-      alert("Cannot connect to backend. Make sure Spring Boot is running!");
+      alert("Cannot connect to backend Make sure Spring Boot is running!");
     }
   };
 
