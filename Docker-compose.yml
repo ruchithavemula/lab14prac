@@ -1,0 +1,41 @@
+services:
+  mysqldb:   
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: pass    
+      MYSQL_DATABASE: dtable 
+    ports: 
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - springboot-mysql-net
+
+  backend:
+    image : ruchithavemula11/backend-helm:latest 
+    container_name: hotel-backend
+    ports:
+      - "30040:2090"
+    depends_on:
+      - mysqldb
+    restart: on-failure
+    networks:
+      - springboot-mysql-net
+
+  frontend:
+    image: ruchithavemula11/frontend-helm:latest
+    container_name: hotel-frontend
+    ports:
+      - "30030:80"
+    depends_on:
+      - backend
+    restart: on-failure
+    networks:
+      - springboot-mysql-net
+
+volumes:
+  mysql_data:
+
+networks:
+  springboot-mysql-net:
