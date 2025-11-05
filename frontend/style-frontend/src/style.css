@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f7;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.dress-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dress-form input {
+  margin: 8px 0;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.dress-form button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.dress-form button:hover {
+  background-color: #2980b9;
+}
+
+.dress-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dress-item {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.dress-item:hover {
+  transform: translateY(-5px);
+}
+
+.dress-item h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.dress-item p {
+  margin: 5px 0;
+  color: #7f8c8d;
+}
+
+.dress-item button:first-child {
+  background-color: #27ae60;
+  color: white;
+  margin-right: 5px;
+}
+
+.dress-item button:first-child:hover {
+  background-color: #1e8449;
+}
+
+.dress-item button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.dress-item button:last-child:hover {
+  background-color: #c0392b;
+}
